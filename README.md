@@ -12,5 +12,5 @@ npm run build
 
 ## Деплой
 
-Проект подготовлен для GitHub Pages через `.github/workflows/deploy.yml`.
-После публикации репозитория на GitHub включите Pages с источником `GitHub Actions`.
+Проект подготовлен для GitHub Pages из папки `docs` в ветке `main`.
+Workflow `.github/workflows/deploy.yml` пересобирает сайт и коммитит свежую папку `docs` после push в `main`.

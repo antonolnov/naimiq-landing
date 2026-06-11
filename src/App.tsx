@@ -116,7 +116,7 @@ function App() {
           <a href="#faq">FAQ</a>
         </nav>
         <div className="header-actions">
-          <a className="login" href="#login">Войти</a>
+          <a className="login" href="/login" aria-label="Войти в личный кабинет">Войти</a>
           <a className="button button-small" href="#demo">Запросить демо</a>
         </div>
       </header>

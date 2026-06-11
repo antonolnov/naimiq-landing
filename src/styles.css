@@ -447,18 +447,24 @@ details {
 }
 
 .logo-strip {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 8px 0 58px;
 }
 
 .logo-strip span {
-  display: grid;
+  display: flex;
+  flex: 1 1 168px;
+  align-items: center;
+  justify-content: center;
   min-height: 64px;
-  place-items: center;
+  padding: 0 18px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .split-section {
@@ -976,8 +982,7 @@ textarea:focus {
   }
 
   .segments,
-  .metrics,
-  .logo-strip {
+  .metrics {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1093,7 +1098,15 @@ textarea:focus {
   }
 
   .logo-strip {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-strip span {
+    flex: initial;
+    min-height: 56px;
+    padding: 0 12px;
+    white-space: normal;
   }
 
   .mini-cta {

@@ -306,7 +306,7 @@ function App() {
         <section className="cta section-shell" id="demo">
           <div className="cta-copy">
             <p className="eyebrow">Демо-доступ</p>
-            <h2>Посмотрите, как НаймIQ ускорит подбор в вашей команде</h2>
+            <h2>Разберите найм с НаймIQ за 30 минут</h2>
             <p>За 30 минут разберем вашу воронку, покажем сценарий под вакансии и обсудим безопасный пилот.</p>
             <ol className="demo-steps">
               {demoSteps.map((step) => (
@@ -341,7 +341,7 @@ function App() {
               Что хотите улучшить в подборе?
               <textarea name="message" placeholder="Например: ускорить скрининг, собрать единую базу, подключить аналитику" />
             </label>
-            <button className="button full-field" type="submit">Запросить демо</button>
+            <button className="button full-field" type="submit">Запросить разбор</button>
             {submitted && <p className="form-note full-field">Спасибо. Для боевого запуска эту форму можно подключить к CRM, Яндекс Формам или webhook.</p>}
           </form>
         </section>

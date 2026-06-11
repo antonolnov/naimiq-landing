@@ -105,9 +105,9 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="НаймIQ">
-          <span className="brand-mark">IQ</span>
-          <span>НаймIQ</span>
+        <a className="brand" href="#top" aria-label="Recruit pilot">
+          <span className="brand-mark">RP</span>
+          <span>Recruit pilot</span>
         </a>
         <nav className="nav" aria-label="Главная навигация">
           <a href="#product">Продукт</a>
@@ -127,7 +127,7 @@ function App() {
             <p className="eyebrow">Для in-house HR и агентств подбора</p>
             <h1>ATS и CRM для найма через hh.ru, Telegram и согласования</h1>
             <p className="hero-text">
-              НаймIQ собирает вакансии, кандидатов, коммуникации и аналитику в один контур. AI помогает с короткими списками и сообщениями, а решения остаются за рекрутером.
+              Recruit pilot собирает вакансии, кандидатов, коммуникации и аналитику в один контур. AI помогает с короткими списками и сообщениями, а решения остаются за рекрутером.
             </p>
             <div className="hero-actions">
               <a className="button" href="#demo">Запросить демо</a>
@@ -140,7 +140,7 @@ function App() {
               <span>Экспорт данных</span>
             </div>
           </div>
-          <div className="hero-visual" aria-label="Макет интерфейса НаймIQ">
+          <div className="hero-visual" aria-label="Макет интерфейса Recruit pilot">
             <div className="dashboard-card main-card">
               <div className="window-bar">
                 <span></span>
@@ -193,7 +193,7 @@ function App() {
             <h2>Все инструменты подбора работают вместе</h2>
           </div>
           <p>
-            Вместо разрозненных таблиц, писем и мессенджеров НаймIQ дает команде единый контур: от заявки на вакансию до оффера и аналитики результата.
+            Вместо разрозненных таблиц, писем и мессенджеров Recruit pilot дает команде единый контур: от заявки на вакансию до оффера и аналитики результата.
           </p>
         </section>
 
@@ -306,7 +306,7 @@ function App() {
         <section className="cta section-shell" id="demo">
           <div className="cta-copy">
             <p className="eyebrow">Демо-доступ</p>
-            <h2>Разберите найм с НаймIQ за 30 минут</h2>
+            <h2>Разберите найм с Recruit pilot за 30 минут</h2>
             <p>За 30 минут разберем вашу воронку, покажем сценарий под вакансии и обсудим безопасный пилот.</p>
             <ol className="demo-steps">
               {demoSteps.map((step) => (
@@ -349,8 +349,8 @@ function App() {
 
       <footer className="footer">
         <div className="brand">
-          <span className="brand-mark">IQ</span>
-          <span>НаймIQ</span>
+          <span className="brand-mark">RP</span>
+          <span>Recruit pilot</span>
         </div>
         <p>AI-платформа для подбора персонала в России.</p>
         <div className="footer-links">

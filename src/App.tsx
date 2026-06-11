@@ -342,7 +342,7 @@ function App() {
               <textarea name="message" placeholder="Например: ускорить скрининг, собрать единую базу, подключить аналитику" />
             </label>
             <button className="button full-field" type="submit">Запросить разбор</button>
-            {submitted && <p className="form-note full-field">Спасибо. Для боевого запуска эту форму можно подключить к CRM, Яндекс Формам или webhook.</p>}
+            {submitted && <p className="form-note full-field">Спасибо! Заявка принята. Свяжемся в течение рабочего дня, чтобы согласовать демо и подготовить сценарий под ваши вакансии.</p>}
           </form>
         </section>
       </main>

@@ -27,16 +27,30 @@ textarea {
 }
 
 .depth-page {
+  display: grid;
   position: relative;
   min-height: 100vh;
   isolation: isolate;
   overflow: hidden;
+  place-items: center;
+  padding: 24px;
   background:
     radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.78) 0 7%, transparent 27%),
     radial-gradient(circle at 22% 28%, rgba(111, 84, 255, 0.48), transparent 34%),
     radial-gradient(circle at 82% 32%, rgba(44, 224, 190, 0.42), transparent 36%),
     radial-gradient(circle at 48% 88%, rgba(255, 137, 226, 0.24), transparent 44%),
     linear-gradient(135deg, #eef1ff 0%, #f8faf7 36%, #d9f4e9 67%, #ecf0ff 100%);
+}
+
+.access-note {
+  max-width: 640px;
+  margin: 0;
+  color: rgba(10, 18, 34, 0.68);
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .depth-page::before,

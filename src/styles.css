@@ -1,14 +1,7 @@
 :root {
-  color: #111827;
-  background: #eef2f0;
-  --font-sans: Manrope, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  --ink: #111827;
-  --muted: #667085;
-  --line: rgba(17, 24, 39, 0.1);
-  --blue: #3157ff;
-  --green: #18a36f;
-  font-family: var(--font-sans);
+  color: #f8fbff;
+  background: #070b18;
+  font-family: Manrope, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,10 +15,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(49, 87, 255, 0.13), transparent 28rem),
-    radial-gradient(circle at 82% 22%, rgba(24, 163, 111, 0.14), transparent 26rem),
-    linear-gradient(180deg, #f7f8f6 0%, #eef2f0 100%);
+  overflow: hidden;
+  background: #070b18;
 }
 
 button,
@@ -35,59 +26,67 @@ textarea {
   font: inherit;
 }
 
-.tech-page {
-  display: grid;
+.depth-page {
+  position: relative;
   min-height: 100vh;
-  place-items: center;
-  padding: 24px;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.78) 0 7%, transparent 27%),
+    radial-gradient(circle at 22% 28%, rgba(111, 84, 255, 0.48), transparent 34%),
+    radial-gradient(circle at 82% 32%, rgba(44, 224, 190, 0.42), transparent 36%),
+    radial-gradient(circle at 48% 88%, rgba(255, 137, 226, 0.24), transparent 44%),
+    linear-gradient(135deg, #eef1ff 0%, #f8faf7 36%, #d9f4e9 67%, #ecf0ff 100%);
 }
 
-.status {
-  margin: 0 0 18px;
-  color: var(--green);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.status::before {
+.depth-page::before,
+.depth-page::after {
+  position: absolute;
+  inset: -28%;
+  z-index: -1;
   content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: currentColor;
+  pointer-events: none;
 }
 
-h1 {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(40px, 7vw, 72px);
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 1;
+.depth-page::before {
+  background:
+    radial-gradient(circle at 18% 35%, rgba(73, 68, 255, 0.58), transparent 23%),
+    radial-gradient(circle at 76% 38%, rgba(0, 197, 169, 0.54), transparent 24%),
+    radial-gradient(circle at 58% 72%, rgba(255, 95, 202, 0.32), transparent 28%),
+    conic-gradient(from 130deg at 50% 50%, rgba(255, 255, 255, 0.9), rgba(117, 92, 255, 0.34), rgba(53, 233, 194, 0.38), rgba(255, 255, 255, 0.86));
+  filter: blur(42px) saturate(1.35);
+  opacity: 0.82;
+  transform: translate3d(0, 0, 0) scale(1.08);
+  animation: shimmer 14s ease-in-out infinite alternate;
 }
 
-.lead {
-  max-width: 620px;
-  margin: 18px 0 0;
-  color: #394151;
-  font-size: clamp(18px, 2vw, 21px);
-  line-height: 1.58;
+.depth-page::after {
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.62), transparent 34%, rgba(255, 255, 255, 0.26) 48%, transparent 68%),
+    repeating-radial-gradient(circle at 50% 48%, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 18px);
+  mix-blend-mode: soft-light;
+  opacity: 0.72;
+  animation: drift 18s ease-in-out infinite alternate;
 }
 
-.secondary {
-  color: var(--muted);
-}
-
-@media (max-width: 640px) {
-  .tech-page {
-    align-items: center;
-    padding: 20px;
+@keyframes shimmer {
+  0% {
+    transform: translate3d(-3%, -2%, 0) rotate(-5deg) scale(1.08);
+    filter: blur(44px) saturate(1.25) hue-rotate(0deg);
   }
 
-  .status {
-    margin-bottom: 14px;
+  100% {
+    transform: translate3d(3%, 2%, 0) rotate(7deg) scale(1.2);
+    filter: blur(54px) saturate(1.55) hue-rotate(28deg);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(-4%, 2%, 0) rotate(0deg) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(5%, -3%, 0) rotate(10deg) scale(1.12);
   }
 }
